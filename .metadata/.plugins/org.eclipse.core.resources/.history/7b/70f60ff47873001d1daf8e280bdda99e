@@ -1,0 +1,35 @@
+package jungsuk.ch14;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class StreamEx6 {
+
+	public static void main(String[] args) {
+
+		Student[] stuArr = {
+				new Student("이자바", 3, 300);
+				new Student("김자바", 1, 200);
+				new Student("안자바", 2, 200);
+				new Student("박자바", 2, 150);
+				new Student("소자바", 1, 200);
+				new Student("나자바", 3, 290);
+				new Student("김자바", 3, 180);
+		}
+		
+		List<String> names = String.of(stuArr).map(Student::getName).collect(Collectors.toList());
+		
+		
+		
+		
+		
+	}
+
+}
+
+
+class Student implements Comparable<Student> {
+	public int compareTO(Student s) {
+		return s.totalScore - this.totalScore;
+	}
+}

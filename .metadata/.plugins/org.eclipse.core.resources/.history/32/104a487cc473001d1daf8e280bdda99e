@@ -1,0 +1,28 @@
+package jungsuk.ch14;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.Reader;
+
+public class StreamEx7 {
+
+	public static void main(String[] args) {
+		
+		String path = "C:\\Users\\User\\Desktop\\실험용폴더\\메롱.txt";
+		
+		File file = new File(path);
+		
+		boolean result = file.createNewFile();
+		}
+
+		
+		
+		
+		
+		
+	}
+
+
+class Student2 {
+	
+}

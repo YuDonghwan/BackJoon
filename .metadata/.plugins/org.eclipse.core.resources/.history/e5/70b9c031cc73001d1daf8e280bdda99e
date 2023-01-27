@@ -1,0 +1,32 @@
+import java.util.Calendar;
+
+public class Hello {
+		public static void main(String[] args) {
+			
+			int year = 2022;
+			int month = 12;
+			int date = 4;
+			
+			Calendar cal = Calendar.getInstance();
+			cal.set(year, month-1, date);
+			
+			System.out.println(cal.get(Calendar.AM_PM));
+			System.out.println(cal.get(Calendar.DAY_OF_WEEK));
+			
+			
+			cal.set(Calendar.DATE, 1);
+			int firstday = cal.get(Calendar.DAY_OF_WEEK);
+			System.out.println(firstday);
+			int lastdate = cal.getActualMaximum(Calendar.DATE);
+			System.out.printf("%d년 %d월%n",year,month);
+			System.out.println("---------------------");
+			System.out.println("[일]  [월]  [화]  [수]  [목]  [금]  [토]");
+			
+			
+			for(int i=0; i<firstday; i++) {
+				System.out.print("    ");
+			}
+			System.out.print("   1");
+			
+		}
+	}

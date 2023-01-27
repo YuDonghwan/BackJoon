@@ -1,0 +1,3 @@
+else if(this.size.equals("A3")) {
+			this.sizePrice = 600;
+			} 

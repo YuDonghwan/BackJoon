@@ -1,0 +1,55 @@
+package com.test.question;
+
+import java.util.Scanner;
+
+public class Q007 {
+
+	public static void main(String[] args) {
+
+		/*
+		 
+		 1. 스캐너를 생성한다.
+		2. 사용할 변수를 선언한다.
+		3. 라벨을 출력한다.
+		4. 영문 소문자를 입력받는다.
+		5. 연산을 한다.
+		6. 결과를 출력한다.
+		 */
+		Scanner scan=new Scanner(System.in);
+		char code =0;
+		char result=0;
+		
+		System.out.println("문자입력: ");
+		code =scan.nextLine().charAt(0);
+		result =(char)((int)code-32);
+		
+//		String small =scan.nextLine();
+//		char big=(char)(small.charAt(0)-32);
+		System.out.printf("소문자 %s의 대문자는 %s입니다.",code,result);
+		
+		scan.close();
+		//char big =(char)(Integer.parseInt(small)-32);
+		//System.out.println(big);
+		//System.out.println(big);
+		//TODO 왜 parseInt는 안되는지?
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

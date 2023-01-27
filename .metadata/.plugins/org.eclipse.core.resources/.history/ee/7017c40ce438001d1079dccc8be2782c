@@ -1,0 +1,57 @@
+package com.test.question;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.HashMap;
+
+public class Q124_File {
+
+	public static void main(String[] args) {
+		
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Desktop\\일일 과제\\0파일_입출력_문제\\출결.dat"));
+			
+			HashMap<String,Integer> lateMap = new HashMap<String,Integer>();
+			HashMap<String,Integer> earlyMap = new HashMap<String,Integer>();
+			
+			String line = "";
+			String name = "";
+			int start = 0;
+			int finish = 0;
+			
+			while((line = reader.readLine()) != null) {
+				
+				String[] temp = line.split(",");
+				
+				start = Integer.parseInt(temp[2].substring(0, 1));
+				finish = Integer.parseInt(temp[3].substring(0, 1));
+				
+				if(start >= 9) {
+					
+					lateMap.put(temp[1], 1);
+					
+					if(lateMap.get(temp[1]) != 0) {
+					lateMap.put(temp[1], lateMap.get(temp[1])+1);
+					}
+					
+				if(finish < 18) {
+					if(earlyMap.get(temp[3]) == 0) {
+						earlyMap.put(temp[1], 1);
+						} else {earlyMap.put(temp[1], lateMap.get	
+								(temp[1])+1);
+				}
+					
+					
+				
+			}
+
+			}	
+		}
+			}
+		 catch (Exception e) {
+			System.out.println("Q124_File.main");
+			e.printStackTrace();
+		}
+	}//main
+
+}

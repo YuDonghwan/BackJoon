@@ -1,0 +1,60 @@
+package com.test.question;
+
+import java.util.Scanner;
+
+public class Q004 {
+
+	public static void main(String[] args) {
+		
+		double hwa = (double)0;
+		double sup = (double)0;
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("섭씨(℃): ");
+		sup = scan.nextDouble();
+		
+		hwa = sup * 1.8 + 32;
+		
+		System.out.printf("섭씨 %.1f℃는 화씨 %.1f℉입니다.",sup,hwa);
+		
+		
+	}
+
+}
+
+
+
+//요구사항] 섭씨 온도를 입력받아서 화씨 온도로 변환하시오.
+
+/*
+		 
+		 선생님꺼.
+		 1. 스캐너를 생성한다.
+		2. 사용할 변수를 선언한다.
+		3. 라벨을 출력한다.
+		4. 온도를입력받는다.
+		5. 연산을 한다.
+		6. 결과를 출력한다.
+		 
+		 
+		 내꺼
+			 ℉ = ℃ × 1.8 + 32
+			소수 입력 가능
+			소수 이하 1자리까지 출력하시오.
+			
+		1.스캐너 생성
+		2.문구출력
+		3.double로 읽기
+		4.조건에 맞게 출력
+		
+		Scanner scan=new Scanner(System.in);
+		
+		System.out.print("섭씨(℃):");
+		
+		double temp=scan.nextDouble();
+		
+		double fah =temp*1.8+32;
+		
+		System.out.printf("섭씨 %.1f℃는 화씨 %.1f℉입니다.",temp,fah);
+		
+ */

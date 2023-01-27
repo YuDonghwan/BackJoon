@@ -1,0 +1,111 @@
+package com.test.question;
+
+import java.util.Scanner;
+
+public class Q042 {
+		public static void main(String[] args) {
+			
+			int year=0;
+			int yoon=0;
+			int pyeong=0;
+			
+			for(int i=1;i<=2021;i++) {
+				if(i%4==0) {
+					if(i%100==0) {
+						if(i%400==0) {
+							yoon+=1;
+						}else {pyeong+=1;
+						}
+					}
+					else {yoon+=1;
+					}
+				}
+				else {pyeong+=1;
+				}
+				
+			}
+				System.out.printf("평년: %d",pyeong);
+				System.out.printf("윤년: %d",yoon);
+				System.out.println();
+			
+			int date =(2021*365) + (5*31) + (2*30) + 28 + 490; //738398
+			System.out.println(date);
+		}
+	
+	
+	
+}
+
+
+
+
+
+
+
+//1년 1월 1일 2022년 8월 30일
+//1년=365일 
+
+//1년 1월 1일
+//2021 12월 31일
+//2021 * 365 +윤년(+1)
+
+/*
+ 
+ 
+ 
+ 	int year =0;
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("년도 입력: ");
+		year=scan.nextInt();
+		
+		if(year%4==0) {
+			if(year%100==0) {
+				if(year%400==0) {
+					System.out.printf("%d년은 '윤년'입니다.",year);
+				}else {System.out.printf("%d년은 '평년'입니다.",year);
+			}
+			}
+			else {System.out.printf("%d년은 '윤년'입니다.",year);}
+		}
+		else {System.out.printf("%d년은 '평년'입니다.",year);
+		}
+				
+ 
+ 
+ 
+만년 달력 만들기
+-년 +월
+-2022년 8월
+1. 해당월의 마지막일? >31일
+2. 해당월의 1일 요일? > 기준점
+ 원하는 날짜가 
+
+1년 1월 1일 
+1년 1월 25일
+1년 2월 10일?
+1년1월 1일기준 >2022 8월 1일까지 >5000일 >5000 % 7>2
+
+일   월  화   수   목  금   토
+	1	2	3	4	5	6
+7	8	9	10	11	12	13
+14	15	16	17	18	19	20
+21	22	23	24	25	26	27
+28	29	30	31	32	33	34
+35	36	37	38	39	40	41
+
+
+
+	
+	25%7 =4
+
+
+
+요구사항
+서기 1년 1월 1일부터 오늘까지 며칠째인지 합을 구하시오.
+
+조건..
+Calendar 클래스 사용 금지
+출력..
+2022년 8월 30일은 738,397일째 되는 날이고 화요일입니다.
+*/

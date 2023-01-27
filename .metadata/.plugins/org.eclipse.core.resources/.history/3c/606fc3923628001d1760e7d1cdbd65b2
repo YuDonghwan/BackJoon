@@ -1,0 +1,73 @@
+package com.test.question;
+
+import java.util.Scanner;
+
+import org.graalvm.compiler.lir.aarch64.AArch64ArrayEqualsOp;
+
+public class Q040 {
+	public static void main(String[] args) {
+		
+		
+		int start =0;
+		int end=0;
+		int sum=0;
+		int even=0;
+		int odd=0;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("시작 숫자: ");
+		start=scan.nextInt();
+	
+		System.out.println("종료 숫자: ");
+		end=scan.nextInt();
+		
+		for(int i=start;i<=end;i++) {
+			
+			if(i%2==1) {
+				System.out.printf("%d-",i);
+			}
+			else if(i==end) {
+				System.out.printf("%d=",i);
+			}
+			else {
+				System.out.printf("%d+",i);
+			}
+		}
+		
+		
+		
+	}
+}
+
+
+
+/*
+
+start
+end
+sum
+
+스캐너 생성
+라벨출력
+버퍼 읽기
+
+ 반복문 
+ 조건문
+ sum 짝수면 -  홀수면 +
+ 
+ 조건문 홀수 뒤에 -
+ 짝수 뒤에 +
+ 그게 아니면 =
+
+
+
+
+
+
+
+
+
+
+
+*/

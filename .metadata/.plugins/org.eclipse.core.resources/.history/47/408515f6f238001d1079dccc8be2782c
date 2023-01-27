@@ -1,0 +1,56 @@
+package com.test.question;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Q112_File {
+
+	public static void main(String[] args) { //TODO 복습
+
+		String path = "C:\\Users\\User\\Desktop\\일일 과제\\0파일_디렉토리_문제\\확장자별 카운트";
+		
+		File file = new File(path);
+		
+		HashMap<String,Integer> map = new HashMap<String,Integer>(); 
+		File[] list = file.listFiles();
+		
+		for(File images : list) { //더 늘어날지 줄어들지.. 모르겠으면 컬렉션을 사용
+			
+			if(images.isFile()) {
+				
+			
+			String ext = images.getName().substring(images.getName().lastIndexOf("."));
+			
+			if(map.get(ext) == null) {
+				map.put(ext, 1);
+			} else {
+				map.put(ext, map.get(ext) +1);
+			}
+			}
+			
+		}
+		
+		Set<String> keys = map.keySet();
+		
+		
+		for (String key : keys) {
+			System.out.printf("*.%s: %d개\n",key, map.get(key));
+		}
+		
+		
+//		Iterator<String> iter = keys.iterator();
+//		String key = iter.next();
+//		
+//		while(iter.hasNext()) {
+//			
+//			System.out.printf("*.%s: %d개\n", key, map.get(key)); //
+			
+		} 
+		
+		
+		
+	}
+
+}

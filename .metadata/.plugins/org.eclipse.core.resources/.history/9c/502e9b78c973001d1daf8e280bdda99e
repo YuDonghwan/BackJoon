@@ -1,0 +1,93 @@
+package jungsuk.ch14;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Calendar;
+
+public class StreamEx7 {
+
+	public static void main(String[] args) {
+		
+//	m9();
+	m8();
+	
+		}
+
+private static void m8() {
+		String path = "C:\\Users\\User\\Desktop\\deleteset";
+		
+		File file = new File(path);
+		
+		File[] list = file.listFiles();
+		
+		
+		for(File f : list) {
+			if(f.isDirectory()) {
+				System.out.println(f.delete());
+			}
+		}
+		
+		
+	
+	
+	}
+
+private static void m9() {
+		
+		//요구사항] 일정 > 날짜별 폴더 생성 > "2022-01-01" ~ "2022-12-31" X 365
+		
+		Calendar c = Calendar.getInstance();
+		c.set(2022, 0, 1);
+		
+//		System.out.printf("tF", c);
+//		c.add(Calendar.DATE, 1);
+//		System.out.printf("tF", c);
+
+		//***새로운 메소드
+		//올해 며칠?
+		System.out.println(c.getActualMaximum(Calendar.DAY_OF_YEAR)); //해당 캘린더의 월의 마지막일을 구함
+		for(int i=0; i<c.getActualMaximum(Calendar.DAY_OF_YEAR); i++) {
+			
+			String path = String.format("C:\\Users\\User\\Desktop\\실험용폴더\\%tF", c);
+			System.out.println(path);
+			
+			File dir = new File(path);
+			System.out.println(dir.mkdir());
+			
+			
+			c.add(Calendar.DATE, 1);
+		}
+		
+	}
+
+private static void m4() { //이런게 있다.
+
+	//1. FileOutputStream
+	//2. FileWriter > 파일쓰기 (전용) > 파일입출력만 사용 ***
+	//3. BufferedWriter > 여러가지 쓰기(범용) > 네트워크 입출력시에도 사용 ,카톡 등 종종
+	
+	try {
+		BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\class\\code\\java\\file\\list.txt"));
+		
+		writer.write("안녕하세요.");
+		writer.write("\r\n");
+		writer.newLine();
+		writer.write("홍길동입니다.");
+		writer.close();
+		
+		System.out.println("종료");
+		
+		
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+	
+}
+}
+		
+		
+		
+
+

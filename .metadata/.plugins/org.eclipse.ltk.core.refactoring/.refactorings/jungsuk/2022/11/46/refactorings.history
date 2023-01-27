@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;jungsuk.qeustion.jungsuk9_9.java&apos; to &apos;ch9_9.java&apos;&#x0D;&#x0A;- Original project: &apos;jungsuk&apos;&#x0D;&#x0A;- Original element: &apos;jungsuk.qeustion.jungsuk9_9.java&apos;&#x0D;&#x0A;- Renamed element: &apos;jungsuk.qeustion.ch9_9.java&apos;" description="Rename compilation unit &apos;jungsuk9_9.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;jungsuk.qeustion{jungsuk9_9.java" name="ch9_9.java" references="false" stamp="1667916309167" version="1.0"/>
+</session>
