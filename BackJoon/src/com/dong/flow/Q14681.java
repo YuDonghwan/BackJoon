@@ -1,5 +1,7 @@
 package com.dong.flow;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Q14681 {
@@ -9,7 +11,7 @@ public class Q14681 {
 		Scanner scan = new Scanner(System.in);
 		int x = scan.nextInt();
 		int y = scan.nextInt();
-		
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 				
 		if(x > 0) {
 			if(y > 0)System.out.println(1);
