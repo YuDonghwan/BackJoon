@@ -10,9 +10,7 @@ public class Q2884 {
 		
 		Scanner scan = new Scanner(System.in);
 		int h = scan.nextInt();
-		
 		int m = scan.nextInt();
-		
 		
 		if(m<45) {
 			h = h-1;
@@ -24,9 +22,5 @@ public class Q2884 {
 		}
 		System.out.print(h + " " + m);
 		scan.close();
-		
-		
-		
-		
 	}
 }
