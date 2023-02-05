@@ -13,7 +13,6 @@ public class Q10950 {
 			int x = scan.nextInt();
 			int y = scan.nextInt();
 			System.out.println(x + y);
-			
 		}
 		
 		scan.close();
