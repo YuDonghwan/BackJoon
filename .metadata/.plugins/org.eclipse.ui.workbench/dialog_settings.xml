@@ -25,4 +25,6 @@
 			<item value="C:\class\code\configuration.epf"/>
 		</list>
 	</section>
+	<section name="FileSystemImportWizard">
+	</section>
 </section>
