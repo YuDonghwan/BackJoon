@@ -1,0 +1,15 @@
+package com.dong.loop;
+
+public class Q10 {
+	public static void main(String[] args) {
+		
+		StringBuffer buffer = new StringBuffer("abc");
+		StringBuilder builder = new StringBuilder("abc");
+		System.out.println(builder);
+		builder.append(false)
+//		builder.append
+		
+		String str2 = new String("abc");
+		
+	}
+}

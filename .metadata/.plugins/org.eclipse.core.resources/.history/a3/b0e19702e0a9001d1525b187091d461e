@@ -1,0 +1,22 @@
+package com.dong.loop;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Q7 {
+	public static void main(String[] args) {
+	
+		Map<String,Integer> map = new HashMap<>();
+		
+		//map.put("과일", 갯수);
+
+				map.put("사과", 1);
+				map.put("배", 2);
+				map.put("바나나", 3);
+
+		// 과일 갯수 구하기 > map.get("특정과일이름");
+				System.out.println(map.get("사과"));
+	}
+}
+	
+	
