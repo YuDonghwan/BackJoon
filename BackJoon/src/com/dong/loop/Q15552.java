@@ -19,6 +19,7 @@ public class Q15552 {
 		int n = Integer.parseInt(br.readLine());
 		
 		
+		
 		StringTokenizer st;
 		
 		for(int i=0; i<n; i++) {
