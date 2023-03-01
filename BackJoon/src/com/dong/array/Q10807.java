@@ -5,7 +5,6 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
 
 
 public class Q10807 {
@@ -31,12 +30,6 @@ public class Q10807 {
 		}
 		
 		bw.write(String.valueOf(count));
-		
-		
-		
-		
-		
-		
 		
 		
 		br.close();
